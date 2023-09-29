@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'Manticore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'manticore',
+        'USER': 'root',
+        'PASSWORD': 'IamHuman@123',
+        'HOST': 'localhost',   # Set to the address of your MySQL instance.
+        'PORT': '3306',
     }
 }
 

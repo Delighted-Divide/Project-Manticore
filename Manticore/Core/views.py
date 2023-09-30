@@ -5,4 +5,11 @@ from django.http import HttpResponse
 
 
 def dashboard(request):
-    return render(request, "Core/trial.html")
+    labels = ["January", "February", "March", "April"]
+    data = [10, 20, 30, 40]
+
+    context = {
+        'labels': labels,
+        'data': data,
+    }
+    return render(request, "Core/dashboard.html", context)

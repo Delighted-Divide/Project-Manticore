@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 
 def dashboard(request):
-    return HttpResponse('Dashboard page')
+    return render(request, "Core/trial.html")

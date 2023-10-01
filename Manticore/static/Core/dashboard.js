@@ -1,21 +1,22 @@
-var ctx = document.getElementById("line").getContext("2d");
-var myLineChart = new Chart(ctx, {
+console.log("pink");
+
+var ctx = document.getElementById("line-graph").getContext("2d");
+var myChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
         label: "Monthly Sales",
-        data: [10, 15, 7, 12, 8],
+        data: [12, 19, 3, 5, 2, 3, 10],
         borderColor: "rgba(75, 192, 192, 1)",
-        fill: true,
+        borderWidth: 1,
+        fill: false,
+        tension: 0.4, // This makes the line curved
       },
     ],
   },
   options: {
-    layout: {
-      padding: 150,
-    },
     scales: {
       y: {
         beginAtZero: true,

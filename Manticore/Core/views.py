@@ -8,7 +8,7 @@ from .forms import UserRegisterForm
 
 def dashboard(request):
     context = {'pname': "Dashboard"}
-    return render(request, "Core/dashboard.html", context)
+    return render(request, "dashboard.html", context)
 
 
 def register(request):
@@ -22,4 +22,4 @@ def register(request):
     else:
         form = UserRegisterForm()
         print("Input", form)
-    return render(request, 'Core/register.html', {'form': form, 'pname': "Register"})
+    return render(request, 'register.html', {'form': form, 'pname': "Register"})

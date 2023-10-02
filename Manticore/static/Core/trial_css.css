@@ -28,7 +28,6 @@ body {
   margin: 2px;
   z-index: 1;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 #right {
@@ -52,7 +51,7 @@ body {
 }
 
 #footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: var(--lay);
   bottom: 0px;
